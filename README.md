@@ -1,62 +1,17 @@
-# Terra Overworld Config
+## Mirabilis (A [Terra](https://modrinth.com/plugin/terra) config pack)
+This config pack is a fork of the default [Terra Overworld (2.0) config](https://github.com/PolyhedralDev/TerraOverworldConfig/tree/2.0) 
+with some modifications, like adjustion the world height to 0-512 and 
+maybe even overhaul the biomes (if I ever get enough time to do that). 
+To use this pack, you will need a datapack that changes the build limits 
+to 0-512, you can use [Amazing Heights](https://github.com/LizWiz14/MCR_amazing_heights) for example.
 
-The default overworld configuration for Terra 6.0+, containing over _140_ different biomes.
+# Completion Status
+▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ 5%
 
-You can find Terra - the main project this config pack is designed for
-[here](https://github.com/PolyhedralDev/Terra).
-
----
-
-## Navigating through the config
-
-This pack is organized into many top level directories, each containing configs
-specific to a different domain of configuration:
-
-- `biomes`
-  Where all biome configs are defined.
-
-- `biome-distribution`
-  Contains configuration files related *where* biomes generate.
-
-- `structures`
-  Where all files loaded as structures are stored. (This includes things like
-  trees, boulders, flower patches, etc.)
-
-- `features`
-  Where all feature configs go - These determine *how structures are
-  generated in the world.*
-
-- `palettes`
-  Contains all palette configs - These are used by biomes to determine what
-  blocks make up the base terrain.
-
-- `math`
-  Common mathematical functions used in the pack as well as generic noise 
-  samplers are defined here.
-
-For more in-depth explanations of each directory's files and subdirectories, you
-can refer to their respective README files.
-
-## Customization
-
-### How do I make biomes larger / smaller?
-
-You can find some easy to modify parameters in the [`meta.yml`](./meta.yml) file
-under `biome-distribution`, which control the scales of different areas of biome
-distribution.
-
-### How do I remove all oceans / all land / all hot biomes / etc?
-
-This pack comes with several biome distribution presets, which can be chosen
-within the [`pack.yml`](./pack.yml) file. If none of these presets do exactly
-what you want, you can further modify biome distribution presets with alternate
-sources and stages. Check out the
-[`biome-distribution/presets/default.yml`](./biome-distribution/presets/default.yml)
-config for these alternative sources and stages.
-
-### Where can I learn more about configuration?
-
-If you want more in-depth customization, or simply just want to know what makes
-this pack tick, you can check out the
-[config development](https://terra.polydev.org/config/development/index.html)
-section of the Terra wiki to learn more.
+- 005% Creating git and making license/readme         
+- 025% Rewriting default config for 0-512 build limit 
+- 050% Reworking bedrock layer (lava caves)
+- 060% Adding first new biome
+- \\/     
+- 090% Adding multiple new biomes
+- 100% Reworking biome placement
