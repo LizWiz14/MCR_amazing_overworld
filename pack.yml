@@ -1,6 +1,6 @@
-id: OVERWORLD
+id: amazing_overworld #MIRABILIS: Change pack id to avoid conflicts.
 version: 2.0.0
-author: "Astrash, Sancires, Aureus, RogueShade"
+author: "Original pack: Astrash, Sancires, Aureus, RogueShade - Mirabilis modified version: Lizwiz, Ali" #MIRABILIS: Update author list.
 
 generator: NOISE_3D
 
