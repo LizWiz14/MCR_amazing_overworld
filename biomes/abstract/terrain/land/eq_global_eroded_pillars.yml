@@ -9,7 +9,7 @@ vars: &variables
   pillarHeight: 0.35
   pillarPlatformHeight: 0.05
   pillarWarpStrength: 45
-  pillarYMin: 50
+  pillarYMin: ${customization.yml:terrain-base-y-level} - 13 #MIRABILIS: Get value automaticly
 
 terrain:
   sampler:

@@ -13,5 +13,5 @@ slant:
   - threshold: 0.4
     palette:
       - BLOCK:minecraft:stone: $meta.yml:top-y
-      - GRAVEL: 61
+      - GRAVEL: ${meta.yml:ocean-level} - 1         #MIRABILIS: Get value automaticly
       - << meta.yml:palette-bottom

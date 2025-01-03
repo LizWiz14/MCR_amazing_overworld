@@ -8,7 +8,7 @@ biome-distribution:
   # You can find these configs in the biome-distribution directory, most of which contain
   # additional more specific parameters.
   
-  continental-scale: 100
+  continental-scale: 200                    #MIRABILIS: Counteract global setting
   # Controls the scale of land / coastal / oceanic distribution. Increasing
   # this produces larger landmasses and larger oceans, and vice-versa when
   # decreasing it.
@@ -44,12 +44,12 @@ biome-distribution:
   # determines which of these biomes within the same group get generated.
   # Default: 60
 
-  cave-biome-scale: 200
+  cave-biome-scale: 400                        #MIRABILIS: Counteract global setting
   # Controls the scale of the placement of cave biomes, larger scale = bigger areas of
   # any given cave biome, smaller scale = smaller cave biomes.
   # Default: 200
 
-  river-spread-scale: 20
+  river-spread-scale: 10                       #MIRABILIS: Counteract global setting
   # Controls how far / close apart rivers generally are, larger scale = further apart
   # rivers, smaller scale = closer packed together rivers.
   # Default: 10
@@ -59,7 +59,7 @@ biome-distribution:
   # further apart, smaller scale = more packed together volcanoes.
   # Default: 150
 
-  volcano-radius: 5
+  volcano-radius: 3                            #MIRABILIS: Counteract global setting
   # Controls the radius of all volcanoes, decreasing this too much can result in some
   # glitchy generation for volcanoes filled with fluids above sea level, so keep this in mind
   # if you want smaller volcanoes!
@@ -71,11 +71,11 @@ biome-distribution:
   # rare, decreasing will make islands closer and therefore more common.
   # Default: 110
   
-  mushroom-island-radius: 4
+  mushroom-island-radius: 2                    #MIRABILIS: Counteract global setting
   # How large any given mushroom island will be.
   # Default: 4
   
-  global-scale: 1
+  global-scale: 3                              #MIRABILIS: Set global scale larger to fit to heights
   # Modifies the scale of everything, you can use this parameter to if you
   # want just about every biome to be larger or smaller.
   # By doubling the scale, you double the length & width of everything,
@@ -86,12 +86,12 @@ biome-distribution:
 # Misc global config stuff
 
 # World Y levels
-top-y: 319
-ocean-level: 62
-deepslate-top: 7     # Y level where deepslate begins to replace stone
-deepslate-bottom: -7 # Y level where all stone is replaced by deepslate
-bedrock-top: -60     # Y level where deepslate starts to be replaced by bedrock
-bottom-y: -64
+top-y: 512                                      #MIRABILIS: Set new y max
+ocean-level: ${meta.yml:top-y} / 4 + 62         #MIRABILIS: Get ocean start automaticly (190)
+deepslate-top: ${meta.yml:bottom-y} + 71        #MIRABILIS: Get deepslate start automaticly (71)
+deepslate-bottom: ${meta.yml:bottom-y} + 57     #MIRABILIS: Get deepslate full automaticly (57)
+bedrock-top: ${meta.yml:bottom-y} + 4           #MIRABILIS: Get bedrock start automaticly (4)
+bottom-y: 0                                     #MIRABILIS: Set new y min to 0, as it should be
 
 palette-slant-generic:
   - BLOCK:minecraft:stone: $meta.yml:top-y

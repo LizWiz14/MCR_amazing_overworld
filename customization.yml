@@ -22,12 +22,12 @@ global-scale: 1
 # All the terrain options below are primarily used by biome terrain parameters
 # implemented by abstract biome configs found in the biomes/abstract/terrain directory.
 
-terrain-base-y-level: 65
+terrain-base-y-level: ${meta.yml:top-y} / 4 + 65       #MIRABILIS: Get base terrain automaticly (193)
 # The base terrain y level. Generally the lowest y level for terrain, this is just a
 # guide and some configs will lower terrain below this point (however not by much).
 # Default: 65
 
-terrain-height: 230
+terrain-height: ${meta.yml:top-y} / 2 - 1              #MIRABILIS: Get max terrain automaticly ((255)448)
 # Number of blocks above the base terrain level that terrain can go do, similarly to
 # terrain-base-y-level this number is also a guide and some configs will produce terrain
 # above this number (however not by much). Note that the sum of terrain-height and 
@@ -35,12 +35,12 @@ terrain-height: 230
 # clipping.
 # Default: 230
 
-terrain-ocean-base-y-level: 60
+terrain-ocean-base-y-level: ${meta.yml:top-y} / 4 + 60 #MIRABILIS: Get base ocean automaticly (188)
 # The base ocean terrain y level, generally the highest level for terrain for ocean biomes.
 # Default 60
 
-terrain-ocean-depth: 100
-# The number of blocks below terain-ocean-base-y-level that ocean terrain will go. Note
+terrain-ocean-depth: ${meta.yml:top-y} / 4 - 50        #MIRABILIS: Get min ocean automaticly (78)
+# The number of blocks below terrain-ocean-base-y-level that ocean terrain will go. Note
 # that this number subtracted from terrain-ocean-base-y-level should not be lower than
 # the lower bound of the world height range, otherwise you might end up with void holes in
 # the world.
@@ -55,7 +55,7 @@ terrain-ocean-depth: 100
 # 1 means 100% inland, 0 means the coast, and -1 means 100% ocean.
 # These options are primarily used in the math/samplers/continents.yml config file.
 
-continental-offset: 0.2
+continental-offset: 0.4                                 #MIRABILIS: Ocean generation impacts CPU more
 # Controls the land / ocean ratio.
 # - A value of 0 results in equal land and ocean
 # - A value of 1 results in 100% land
@@ -68,7 +68,7 @@ continental-offset: 0.2
 #
 # Default: 0.2
 
-continental-spread: 1
+continental-spread: 0.8                                 #MIRABILIS: Ocean generation impacts CPU more
 # Controls how much variation there is in the continental value from
 # the continental-offset.
 #
@@ -80,14 +80,14 @@ continental-spread: 1
 #
 # Default: 1
 
-continental-scale: 1
+continental-scale: 2                                    #MIRABILIS: Combat less ocean generation with bigger oceans
 # Controls the scale of land / coastal / oceanic distribution. Increasing
 # this produces larger landmasses and larger oceans, and vice-versa when
 # decreasing it. This does not control the ratio of land / ocean, for that
 # you should change continental-offset instead.
 # Default: 1
 
-continental-coast-width: 20
+continental-coast-width: 80                             #MIRABILIS: Increase biome size
 # Determines the width of costal biomes in blocks.
 # Default: 30
 
@@ -112,7 +112,7 @@ continental-coast-threshold: 0.05
 # correspons to the highest elevation.
 # These options are primarily used in the math/samplers/elevation.yml config file.
 
-elevation-scale: 1
+elevation-scale: 3                                      #MIRABILIS: Increase elevation spread
 # Controls the scale of the elevation noise map. A larger scale results in larger distances
 # between aspects like mountain ranges and flat areas. If you want more gradual changes in
 # elevation, you can increase this. Conversely, if you want more sudden changes in elevation,
@@ -288,11 +288,11 @@ river-spread-scale: 1
 # rivers, smaller scale = closer packed together rivers.
 # Default: 1
 
-river-min-width: 13
+river-min-width: 8                                  #MIRABILIS: Counteract global setting
 # Controls in blocks the minimum width of rivers.
 # Default: 13
 
-river-max-width: 30
+river-max-width: 20                                 #MIRABILIS: Counteract global setting
 # Controls in blocks the maximum width of rivers.
 # Default: 30
 
