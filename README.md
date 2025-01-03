@@ -6,7 +6,7 @@ To use this pack, you will need a datapack that changes the build limits
 to 0-512, you can use [Amazing Heights](https://github.com/LizWiz14/MCR_amazing_heights) for example.
 
 # Completion Status
-▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ 5%
+▰▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ 10%
 
 - 005% Creating git and making license/readme         
 - 025% Rewriting default config for 0-512 build limit 
