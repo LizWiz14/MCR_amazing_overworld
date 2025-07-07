@@ -47,7 +47,7 @@ diamond:
   averageCountPerChunk: 6
   salt: 1032
   range:
-    min: ${meta.yml:bottom-y} - 80                            #MIRABILIS: change height to automaticly adjust
+    min: ${meta.yml:bottom-y}                                 #MIRABILIS: change height to automaticly adjust
     max: ${customization.yml:terrain-base-y-level} - 144      #MIRABILIS: change height to automaticly adjust
 
 iron:
@@ -82,7 +82,7 @@ redstone:
   averageCountPerChunk: 8
   salt: 7019
   range:
-    min: ${meta.yml:bottom-y} - 32                            #MIRABILIS: change height to automaticly adjust
+    min: ${meta.yml:bottom-y}                                 #MIRABILIS: change height to automaticly adjust
     max: ${meta.yml:bottom-y} + 32                            #MIRABILIS: change height to automaticly adjust
 
 redstone-uniform:
@@ -104,7 +104,7 @@ coal-uniform:
   salt: 7012
   range:
     min: ${meta.yml:bottom-y} + 200                           #MIRABILIS: change height to automaticly adjust
-    max: ${meta.yml:top-y} + 64                               #MIRABILIS: change height to automaticly adjust
+    max: ${meta.yml:top-y}                                    #MIRABILIS: change height to automaticly adjust
 
 gold:
   averageCountPerChunk: 4
@@ -118,21 +118,21 @@ gold-uniform:
   salt: 3313
   range:
     min: ${meta.yml:bottom-y}                                 #MIRABILIS: change height to automaticly adjust
-    max: ${meta.yml:bottom-y} + 16                            #MIRABILIS: change height to automaticly adjust
+    max: ${meta.yml:bottom-y}                                 #MIRABILIS: change height to automaticly adjust
 
 gold-high:
   averageCountPerChunk: 4
   salt: 7462
   range:
     min: ${customization.yml:terrain-base-y-level} + 32       #MIRABILIS: change height to automaticly adjust
-    max: ${meta.yml:top-y} + 64                               #MIRABILIS: change height to automaticly adjust
+    max: ${meta.yml:top-y}                                    #MIRABILIS: change height to automaticly adjust
 
 emerald:
   averageCountPerChunk: 100
   salt: 5091
   range:
     min: ${meta.yml:bottom-y} + 48                            #MIRABILIS: change height to automaticly adjust
-    max: ${meta.yml:top-y} + 64                               #MIRABILIS: change height to automaticly adjust
+    max: ${meta.yml:top-y}                                    #MIRABILIS: change height to automaticly adjust
 
 # ---
 # Deposits
@@ -200,7 +200,7 @@ powdersnow:
   salt: 5825
   range:
     min: ${customization.yml:terrain-base-y-level} - 20       #MIRABILIS: change height to automaticly adjust
-    max: ${meta.yml:top-y} + 64                               #MIRABILIS: change height to automaticly adjust
+    max: ${meta.yml:top-y}                                    #MIRABILIS: change height to automaticly adjust
 
 blueice:
   averageCountPerChunk: 7
