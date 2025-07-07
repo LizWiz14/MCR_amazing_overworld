@@ -111,20 +111,20 @@ gold:
   salt: 5912
   range:
     min: ${meta.yml:bottom-y}                                 #MIRABILIS: change height to automaticly adjust
-    max: ${customization.yml:terrain-base-y-level} - 48       #MIRABILIS: change height to automaticly adjust
+    max: ${meta.yml:bottom-y} + 64                            #MIRABILIS: change height to automaticly adjust
 
 gold-uniform:
   averageCountPerChunk: 1/2
   salt: 3313
   range:
     min: ${meta.yml:bottom-y}                                 #MIRABILIS: change height to automaticly adjust
-    max: ${meta.yml:bottom-y}                                 #MIRABILIS: change height to automaticly adjust
+    max: ${customization.yml:terrain-base-y-level} - 64       #MIRABILIS: change height to automaticly adjust
 
 gold-high:
   averageCountPerChunk: 4
   salt: 7462
   range:
-    min: ${customization.yml:terrain-base-y-level} + 32       #MIRABILIS: change height to automaticly adjust
+    min: ${customization.yml:terrain-base-y-level} + 64       #MIRABILIS: change height to automaticly adjust
     max: ${meta.yml:top-y}                                    #MIRABILIS: change height to automaticly adjust
 
 emerald:
