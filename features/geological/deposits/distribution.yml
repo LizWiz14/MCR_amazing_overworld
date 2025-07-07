@@ -48,7 +48,7 @@ diamond:
   salt: 1032
   range:
     min: ${meta.yml:bottom-y}                                 #MIRABILIS: change height to automaticly adjust
-    max: ${customization.yml:terrain-base-y-level} - 144      #MIRABILIS: change height to automaticly adjust
+    max: ${meta.yml:deepslate-bottom} - 16                       #MIRABILIS: change height to automaticly adjust
 
 iron:
   averageCountPerChunk: 10
@@ -83,7 +83,7 @@ redstone:
   salt: 7019
   range:
     min: ${meta.yml:bottom-y}                                 #MIRABILIS: change height to automaticly adjust
-    max: ${meta.yml:bottom-y} + 32                            #MIRABILIS: change height to automaticly adjust
+    max: ${meta.yml:deepslate-bottom}  - 32                      #MIRABILIS: change height to automaticly adjust
 
 redstone-uniform:
   averageCountPerChunk: 4
@@ -111,7 +111,7 @@ gold:
   salt: 5912
   range:
     min: ${meta.yml:bottom-y}                                 #MIRABILIS: change height to automaticly adjust
-    max: ${meta.yml:bottom-y} + 64                            #MIRABILIS: change height to automaticly adjust
+    max: ${meta.yml:deepslate-bottom}                            #MIRABILIS: change height to automaticly adjust
 
 gold-uniform:
   averageCountPerChunk: 1/2
