@@ -36,6 +36,7 @@ features:
     - MANGROVE_SEAGRASS
   flora:
     - GRASS
+    - FIREFLY_BUSH
     - POPPY_PATCH
     - DANDELION_PATCH
     - BLUE_ORCHID_PATCH
@@ -44,3 +45,6 @@ features:
     - DEAD_BUSHES
   trees:
     - MANGROVE_TREES
+  structures:
+    - MOB_ROOMS
+    - SPARSE_FOSSILS

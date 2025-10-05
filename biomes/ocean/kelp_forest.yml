@@ -1,12 +1,15 @@
 id: KELP_FOREST
 type: BIOME
 extends:
-  - PALETTE_OCEAN
+  - PALETTE_SAND_OCEAN
   - ENVIRONMENT_MARINE_OCEAN
   - EQ_GLOBAL_OCEAN
   - CARVING_OCEAN
   - BASE
 color: $biomes/colors.yml:KELP_FOREST
+
+tags:
+  - USE_TRENCH
 
 vanilla: minecraft:ocean
 
@@ -20,3 +23,5 @@ features:
   underwater-flora:
     - DENSE_KELP
     - SEAGRASS
+  landforms:
+    - SPARSE_OCEAN_BOULDERS

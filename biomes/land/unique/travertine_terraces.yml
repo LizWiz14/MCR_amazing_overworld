@@ -12,9 +12,13 @@ colors:
 
 vanilla: minecraft:river
 
+tags:
+  - USE_RIVER
+
 palette:
-    - BLOCK:minecraft:calcite: $meta.yml:top-y
-    - << meta.yml:palette-bottom
+  - BLOCK:minecraft:calcite: $meta.yml:top-y
+  - << meta.yml:palette-underwater
+  - << meta.yml:palette-bottom
 
 features:
   preprocessors:

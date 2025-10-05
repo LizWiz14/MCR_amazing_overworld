@@ -37,6 +37,7 @@ features:
     - SWAMP_WATER
   flora:
     - GRASS
+    - FIREFLY_BUSH
     - POPPY_PATCH
     - DANDELION_PATCH
     - BLUE_ORCHID_PATCH
@@ -46,3 +47,6 @@ features:
     - OAK_BUSHES
     - SWAMP_TREES
     - DEAD_SWAMP_TREES
+  structures:
+    - MOB_ROOMS
+    - SPARSE_FOSSILS

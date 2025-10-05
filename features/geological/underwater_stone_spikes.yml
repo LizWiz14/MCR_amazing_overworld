@@ -11,8 +11,8 @@ distributor:
 locator:
   type: PATTERN
   range:
-    min: ${meta.yml:ocean-level} - ${customization.yml:terrain-ocean-depth}
-    max: $meta.yml:ocean-level
+    min: ${customization.yml:terrain-ocean-depth}       #MIRABILIS idk
+    max: ${meta.yml:ocean-level}
   pattern:
     type: AND
     patterns:

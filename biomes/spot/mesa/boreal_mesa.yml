@@ -6,7 +6,8 @@ extends:
   - BASE
 color: $biomes/colors.yml:BOREAL_MESA
 
-tags: []
+tags:
+  - USE_COLD_RIVER
 
 vanilla: minecraft:taiga
 
@@ -44,4 +45,5 @@ features:
     - FERNS
   trees:
     - SPRUCE_TREES
+    - SPARSE_FALLEN_THIN_PINE_TREES
     - SPARSE_FALLEN_SPRUCE_TREES

@@ -2,13 +2,16 @@ id: TEMPERATE_ALPHA_MOUNTAINS
 type: BIOME
 extends:
   - ENVIRONMENT_LAND_TEMPERATE_OCEANIC
-  - EQ_GLOBAL_ERODED_PILLARS
+  - EQ_GLOBAL_ERODED
   - CARVING_LAND
   - ORES_EMERALD
   - BASE
 color: $biomes/colors.yml:TEMPERATE_ALPHA_MOUNTAINS
 
 vanilla: minecraft:windswept_hills
+
+tags:
+  - DEEP_DARK
 
 palette:
   - GRASS: $meta.yml:top-y

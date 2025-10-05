@@ -5,7 +5,7 @@
 # See http://terra.polydev.org/config/development/meta-configuration.html for further
 # explanation of how this works.
 
-global-scale: 1
+global-scale: 0.2
 # Modifies the scale of all biome distribution, you can use this parameter 
 # to if you want just about every biome to be larger or smaller.
 # By doubling the scale, you double the length & width of everything,
@@ -22,12 +22,12 @@ global-scale: 1
 # All the terrain options below are primarily used by biome terrain parameters
 # implemented by abstract biome configs found in the biomes/abstract/terrain directory.
 
-terrain-base-y-level: ${meta.yml:top-y} / 4 + 65       #MIRABILIS: Get base terrain automaticly (193)
+terrain-base-y-level: ${meta.yml:ocean-level} + 3                                           #MIRABILIS (193)
 # The base terrain y level. Generally the lowest y level for terrain, this is just a
 # guide and some configs will lower terrain below this point (however not by much).
 # Default: 65
 
-terrain-height: ${meta.yml:top-y} / 2 - 1              #MIRABILIS: Get max terrain automaticly ((255)448)
+terrain-height: ${meta.yml:top-y} / 2 - 1                                                   #MIRABILIS (255)
 # Number of blocks above the base terrain level that terrain can go do, similarly to
 # terrain-base-y-level this number is also a guide and some configs will produce terrain
 # above this number (however not by much). Note that the sum of terrain-height and 
@@ -35,11 +35,11 @@ terrain-height: ${meta.yml:top-y} / 2 - 1              #MIRABILIS: Get max terra
 # clipping.
 # Default: 230
 
-terrain-ocean-base-y-level: ${meta.yml:top-y} / 4 + 60 #MIRABILIS: Get base ocean automaticly (188)
+terrain-ocean-base-y-level: ${meta.yml:ocean-level} - 2                                     #MIRABILIS (188)
 # The base ocean terrain y level, generally the highest level for terrain for ocean biomes.
 # Default 60
 
-terrain-ocean-depth: ${meta.yml:top-y} / 4 - 50        #MIRABILIS: Get min ocean automaticly (78)
+terrain-ocean-depth: ${meta.yml:ocean-level} / 2                                            #MIRABILIS (94)
 # The number of blocks below terrain-ocean-base-y-level that ocean terrain will go. Note
 # that this number subtracted from terrain-ocean-base-y-level should not be lower than
 # the lower bound of the world height range, otherwise you might end up with void holes in
@@ -55,7 +55,7 @@ terrain-ocean-depth: ${meta.yml:top-y} / 4 - 50        #MIRABILIS: Get min ocean
 # 1 means 100% inland, 0 means the coast, and -1 means 100% ocean.
 # These options are primarily used in the math/samplers/continents.yml config file.
 
-continental-offset: 0.4                                 #MIRABILIS: Ocean generation impacts CPU more
+continental-offset: 0.2                                                                     #MIRABILIS  Ocean generation is more taxing for the server
 # Controls the land / ocean ratio.
 # - A value of 0 results in equal land and ocean
 # - A value of 1 results in 100% land
@@ -68,7 +68,7 @@ continental-offset: 0.4                                 #MIRABILIS: Ocean genera
 #
 # Default: 0.2
 
-continental-spread: 0.8                                 #MIRABILIS: Ocean generation impacts CPU more
+continental-spread: 1
 # Controls how much variation there is in the continental value from
 # the continental-offset.
 #
@@ -80,16 +80,16 @@ continental-spread: 0.8                                 #MIRABILIS: Ocean genera
 #
 # Default: 1
 
-continental-scale: 2                                    #MIRABILIS: Combat less ocean generation with bigger oceans
+continental-scale: 1                                                                        #MIRABILIS
 # Controls the scale of land / coastal / oceanic distribution. Increasing
 # this produces larger landmasses and larger oceans, and vice-versa when
 # decreasing it. This does not control the ratio of land / ocean, for that
 # you should change continental-offset instead.
 # Default: 1
 
-continental-coast-width: 80                             #MIRABILIS: Increase biome size
+continental-coast-width: 64                                                                 #MIRABILIS
 # Determines the width of costal biomes in blocks.
-# Default: 30
+# Default: 20
 
 continental-coast-threshold: 0.05
 # Determines how far from a continental value of 0 is considered for calculating 
@@ -112,7 +112,7 @@ continental-coast-threshold: 0.05
 # correspons to the highest elevation.
 # These options are primarily used in the math/samplers/elevation.yml config file.
 
-elevation-scale: 3                                      #MIRABILIS: Increase elevation spread
+elevation-scale: 1
 # Controls the scale of the elevation noise map. A larger scale results in larger distances
 # between aspects like mountain ranges and flat areas. If you want more gradual changes in
 # elevation, you can increase this. Conversely, if you want more sudden changes in elevation,
@@ -200,7 +200,7 @@ flatness-factor: 0.95
 # Temperature
 # ---
 
-temperature-scale: 1
+temperature-scale: 0.5    #MIRABILIS idk
 # Controls the scale of temperature zones. Most biomes are placed according to
 # a temperature map so hot biomes can't generate next to cold biomes, as well as
 # allowing for biomes of similar temperatures to generate together. Increasing this
@@ -208,12 +208,10 @@ temperature-scale: 1
 # hot and cold biomes generating further apart - and vice versa when decreasing it.
 # Default: 1
 
-temperature-offset: 0
-# Offsets how hot / cold temperature is
-# Default: 0
+temperature-min: -1
+# Default: -1
 
-temperature-spread: 1
-# How spread out the temperature difference is
+temperature-max: 1
 # Default: 1
 
 temperature-altitude-lapse-rate: 0.8
@@ -234,10 +232,10 @@ precipitation-scale: 1
 # generate together.
 # Default: 1
 
-precipitation-offset: 0
-# Default 0
+precipitation-min: -1
+# Default -1
 
-precipitation-spread: 1
+precipitation-max: 1
 # Default: 1
 
 precipitation-ocean-threshold: -1
@@ -250,7 +248,7 @@ precipitation-land-threshold: 0.4
 # Variation
 # ---
 
-variation-scale: 1
+variation-scale: 0.5    #MIRABILIS idk
 # Controls scale of biome variations within each climate zone.
 # Decreasing this will result in more smaller biomes to generate in any given
 # climate, while increasing it will result in larger climate variations.
@@ -288,13 +286,30 @@ river-spread-scale: 1
 # rivers, smaller scale = closer packed together rivers.
 # Default: 1
 
-river-min-width: 8                                  #MIRABILIS: Counteract global setting
+river-min-width: 13
 # Controls in blocks the minimum width of rivers.
 # Default: 13
 
-river-max-width: 20                                 #MIRABILIS: Counteract global setting
+river-max-width: 30
 # Controls in blocks the maximum width of rivers.
 # Default: 30
+
+# ---
+# Trenches
+# ---
+
+trench-spread-scale: 1
+# Controls how far / close apart trenches generally are, larger scale = further apart
+# trenches, smaller scale = closer packed together trenches.
+# Default: 1
+
+trench-min-width: 8
+# Controls in blocks the minimum width of trenches.
+# Default: 8
+
+trench-max-width: 13
+# Controls in blocks the maximum width of trenches.
+# Default: 13
 
 # ---
 # Spawn Island
@@ -331,12 +346,22 @@ spawn-island-radius-outer: 400
 # Spot biomes are special circular biomes scattered around the world.
 # Examples include volcanoes, prismatic springs, and crater lakes
 
-spot-spread: 2000
+spot-spread: 2050
 # Roughly how many blocks apart each spot biome will be
-# Default: 2000
+# Default: 2220
 
 spot-radius-min: 50
 # Default: 50
 
 spot-radius-max: 150
 # Default: 150
+
+large-spot-spread: 2150
+# Roughly how many blocks apart each spot biome will be
+# Default: 2000
+
+large-spot-radius-min: 750
+# Default: 750
+
+large-spot-radius-max: 1500
+# Default: 2000

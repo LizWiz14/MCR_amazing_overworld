@@ -15,9 +15,7 @@ locator:
       - type: MATCH_AIR
         offset: 0
       - type: MATCH_SET
-        blocks:
-          - minecraft:oak_leaves
-          - minecraft:spruce_leaves
+        blocks: $features/vegetation/meta.yml:tree-blocks
         offset: -1
 
 structures:

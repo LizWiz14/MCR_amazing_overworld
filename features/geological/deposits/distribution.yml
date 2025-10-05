@@ -208,3 +208,17 @@ blueice:
   range:
     min: ${customization.yml:terrain-base-y-level} - 20       #MIRABILIS: change height to automaticly adjust
     max: ${customization.yml:terrain-base-y-level} + 1        #MIRABILIS: change height to automaticly adjust
+
+suspicious-sand:
+  averageCountPerChunk: 5
+  salt: 5467
+  range:
+    min: ${meta.yml:bottom-y}                                 #MIRABILIS: change height to automaticly adjust
+    max: ${meta.yml:deepslate-bottom}                         #MIRABILIS: change height to automaticly adjust
+
+suspicious-gravel:
+  averageCountPerChunk: 5
+  salt: 6473
+  range:
+    min: ${meta.yml:bottom-y}                                 #MIRABILIS: change height to automaticly adjust
+    max: ${meta.yml:deepslate-bottom}                         #MIRABILIS: change height to automaticly adjust
